@@ -51,6 +51,8 @@ void loop()
 
 void sendMessage(char *msg)
 {
+  Serial.println("Sending");
   vw_send((uint8_t *)msg, strlen(msg));
   vw_wait_tx(); // Wait until the whole message is gone
+  Serial.println("Sent");
 }
