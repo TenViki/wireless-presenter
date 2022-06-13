@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\**",
+                "C:\\Program Files (x86)\\Arduino\\tools\\**",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\**",
+                "C:\\Program Files (x86)\\Arduino\\libraries\\**",
+                "C:\\Users\\vikto\\Documents\\Arduino\\libraries\\**",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino",
+                "c:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\avr\\**",
+                "C:\\Program Files (x86)\\Arduino/hardware\\arduino\\avr\\variants\\standard",
+                "C:\\Program Files (x86)\\Arduino",
+                "C:\\Users\\vikto\\AppData\\Local\\Arduino15\\packages\\digistump\\hardware\\avr\\1.7.5\\**",
+                "C:\\Users\\vikto\\Documents\\Arduino\\libraries\\**",
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\SPI\\**", 
+            "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\SPI\\src"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64",
+            "defines": []
+        }
+    ],
+    "version": 4
+}
