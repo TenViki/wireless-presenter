@@ -1,6 +1,6 @@
 {
-    "port": "COM12",
+    "port": "COM13",
     "board": "arduino:avr:micro",
-    "sketch": "code\\transmitter\\transmitter.ino",
+    "sketch": "code\\reciever\\reciever.ino",
     "programmer": "arduino:avrisp"
 }

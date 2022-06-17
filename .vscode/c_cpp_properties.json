@@ -16,19 +16,20 @@
                 "C:\\Users\\vikto\\AppData\\Local\\Arduino15\\packages\\digistump\\hardware\\avr\\1.7.5\\**",
                 "C:\\Users\\vikto\\Documents\\Arduino\\libraries\\**",
                 "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\SPI\\**", 
-            "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\SPI\\src"
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\SPI\\src",
+                "C:\\Users\\vikto\\Documents\\Arduino\\libraries\\HID-master\\src\\**",
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
-                "_UNICODE"
+                "_UNICODE",
+                "USBCON"
             ],
             "windowsSdkVersion": "10.0.19041.0",
             "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.31.31103/bin/Hostx64/x64/cl.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64",
-            "defines": ["USBCON"],
+            "intelliSenseMode": "windows-msvc-x64"
         }
     ],
     "version": 4

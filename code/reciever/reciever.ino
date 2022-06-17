@@ -1,45 +1,73 @@
 #include <Arduino.h>
-#include <VirtualWire.h>
+#include <RH_ASK.h>
+
 #include <Keyboard.h>
+
+RH_ASK driver(4000, 7, 0);
 
 void setup()
 {
   pinMode(4, OUTPUT);
   digitalWrite(4, HIGH);
 
-  // pinMode(7, INPUT);
-
-  vw_set_ptt_inverted(true); // Required for DR3100
-  vw_set_rx_pin(7);
-  vw_setup(4000); // Bits per sec
-  vw_rx_start();  // Start the receiver PLL running
-
   Serial.begin(9600);
+
+  if (!driver.init())
+    Serial.println("init failed");
+
+  Keyboard.begin();
 }
 
 void loop()
 {
   // Serial.println(digitalRead(7));
-  uint8_t buf[VW_MAX_MESSAGE_LEN];
-  uint8_t buflen = VW_MAX_MESSAGE_LEN;
-  // Serial.println("Waiting for message...");
+  uint8_t buf[RH_ASK_MAX_MESSAGE_LEN];
+  uint8_t buflen = sizeof(buf);
+  //     Serial.println("Waiting for message...");
 
-  if (vw_get_message(buf, &buflen))
+  if (driver.recv(buf, &buflen))
   {
-    if (buf[0] == '1')
+    Serial.println("Got message");
+    Serial.println(buf[0]);
+
     {
-      pressKey(KEY_RIGHT_ARROW);
-    }
-    if (buf[0] == '2')
-    {
-      pressKey(KEY_LEFT_ARROW);
+
+      switch (buf[0])
+      {
+
+      case '1':
+        pressKey(KEY_RIGHT_ARROW);
+        break;
+
+      case '2':
+        pressKey(KEY_LEFT_ARROW);
+        break;
+
+      case '3':
+        pressKey(' ');
+        break;
+
+      case '4':
+        pressKey(KEY_RIGHT_ARROW);
+        break;
+
+      case '5':
+        pressKey(KEY_LEFT_ARROW);
+        break;
+
+      case '6':
+        pressKey(KEY_UP_ARROW);
+        break;
+
+      case '7':
+        pressKey(KEY_DOWN_ARROW);
+        break;
+      }
     }
   }
 }
 
 void pressKey(int key)
 {
-  Keyboard.press(key);
-  delay(10);
-  Keyboard.release(key);
+  Keyboard.write(key);
 }

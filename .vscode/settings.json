@@ -3,6 +3,9 @@
     "*.html": "html",
     "initializer_list": "cpp",
     "xstring": "cpp",
-    "xutility": "cpp"
+    "xutility": "cpp",
+    "*.rh": "cpp",
+    "iosfwd": "cpp",
+    "string": "cpp"
   }
 }
